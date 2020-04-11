@@ -46,22 +46,20 @@ function toggleClass(){
 function addDoneClass(){
     for( i=0; i<li.length; i++){
         li[i].addEventListener('click', toggleClass)
-        }
+    }
 }
 
 addDoneClass();
 
 // delete list items once clickon the delete button
 function buttonDelete() {
-    for(var i=0; i<li.length; i++){
-        this.parentNode.remove();
-    }
+    this.parentNode.remove();
 }
 
 function deleteListAfterClick(){
-    var button = document.querySelectorAll('li button');
-	for( i=0; i<button.length; i++){
-	button[i].addEventListener('click', buttonDelete)
+    var buttons = document.querySelectorAll('li button');
+	for( i=0; i<buttons.length; i++){
+	buttons[i].addEventListener('click', buttonDelete);
 	}
 }
 
